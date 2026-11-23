@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-800 antialiased selection:bg-brandlime-500 selection:text-forest-950;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom styled card */
+.kpi-card {
+  @apply bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs hover:shadow-md transition-all duration-200 relative overflow-hidden;
+}
+
+/* Data Table Dark Forest Header */
+.table-dark-header thead {
+  @apply bg-forest-900 text-white font-semibold;
+}
+
+.table-dark-header thead th {
+  @apply py-3 px-4 text-xs font-semibold tracking-wider text-left border-b border-forest-800;
+}
+
+.table-dark-header tbody tr {
+  @apply border-b border-slate-200 hover:bg-slate-50/80 transition-colors;
+}
+
+.table-dark-header tbody td {
+  @apply py-3 px-4 text-xs text-slate-700;
+}
+
+/* Custom scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
